@@ -23,9 +23,9 @@ Partial Class Form2
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.rtb = New System.Windows.Forms.RichTextBox()
-        Me.btn_OK = New System.Windows.Forms.Button()
-        Me.btn_Cancel = New System.Windows.Forms.Button()
-        Me.rtb_Excel = New System.Windows.Forms.RichTextBox()
+        Me.btnOk = New System.Windows.Forms.Button()
+        Me.btnCancel = New System.Windows.Forms.Button()
+        Me.rtbExcel = New System.Windows.Forms.RichTextBox()
         Me.SuspendLayout()
         '
         'rtb
@@ -39,43 +39,43 @@ Partial Class Form2
         '
         'btn_OK
         '
-        Me.btn_OK.Location = New System.Drawing.Point(321, 611)
-        Me.btn_OK.Name = "btn_OK"
-        Me.btn_OK.Size = New System.Drawing.Size(75, 23)
-        Me.btn_OK.TabIndex = 1
-        Me.btn_OK.Text = "speichern"
-        Me.btn_OK.UseVisualStyleBackColor = True
+        Me.btnOk.Location = New System.Drawing.Point(321, 611)
+        Me.btnOk.Name = "btn_OK"
+        Me.btnOk.Size = New System.Drawing.Size(75, 23)
+        Me.btnOk.TabIndex = 1
+        Me.btnOk.Text = "speichern"
+        Me.btnOk.UseVisualStyleBackColor = True
         '
         'btn_Cancel
         '
-        Me.btn_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btn_Cancel.Location = New System.Drawing.Point(402, 611)
-        Me.btn_Cancel.Name = "btn_Cancel"
-        Me.btn_Cancel.Size = New System.Drawing.Size(75, 23)
-        Me.btn_Cancel.TabIndex = 2
-        Me.btn_Cancel.Text = "abbrechen"
-        Me.btn_Cancel.UseVisualStyleBackColor = True
+        Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnCancel.Location = New System.Drawing.Point(402, 611)
+        Me.btnCancel.Name = "btn_Cancel"
+        Me.btnCancel.Size = New System.Drawing.Size(75, 23)
+        Me.btnCancel.TabIndex = 2
+        Me.btnCancel.Text = "abbrechen"
+        Me.btnCancel.UseVisualStyleBackColor = True
         '
         'rtb_Excel
         '
-        Me.rtb_Excel.Location = New System.Drawing.Point(12, 12)
-        Me.rtb_Excel.Name = "rtb_Excel"
-        Me.rtb_Excel.ReadOnly = True
-        Me.rtb_Excel.Size = New System.Drawing.Size(775, 593)
-        Me.rtb_Excel.TabIndex = 3
-        Me.rtb_Excel.Text = ""
+        Me.rtbExcel.Location = New System.Drawing.Point(12, 12)
+        Me.rtbExcel.Name = "rtb_Excel"
+        Me.rtbExcel.ReadOnly = True
+        Me.rtbExcel.Size = New System.Drawing.Size(775, 593)
+        Me.rtbExcel.TabIndex = 3
+        Me.rtbExcel.Text = ""
         '
         'Form2
         '
-        Me.AcceptButton = Me.btn_OK
+        Me.AcceptButton = Me.btnOk
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.CancelButton = Me.btn_Cancel
+        Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(799, 646)
-        Me.Controls.Add(Me.btn_Cancel)
-        Me.Controls.Add(Me.btn_OK)
+        Me.Controls.Add(Me.btnCancel)
+        Me.Controls.Add(Me.btnOk)
         Me.Controls.Add(Me.rtb)
-        Me.Controls.Add(Me.rtb_Excel)
+        Me.Controls.Add(Me.rtbExcel)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.Name = "Form2"
@@ -86,7 +86,7 @@ Partial Class Form2
 
     End Sub
     Friend WithEvents rtb As System.Windows.Forms.RichTextBox
-    Friend WithEvents btn_OK As System.Windows.Forms.Button
-    Friend WithEvents btn_Cancel As System.Windows.Forms.Button
-    Friend WithEvents rtb_Excel As System.Windows.Forms.RichTextBox
+    Friend WithEvents btnOk As System.Windows.Forms.Button
+    Friend WithEvents btnCancel As System.Windows.Forms.Button
+    Friend WithEvents rtbExcel As System.Windows.Forms.RichTextBox
 End Class

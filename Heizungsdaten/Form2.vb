@@ -1,26 +1,29 @@
 ﻿Imports System.IO
+Imports System.Windows.Forms
+
 Public Class Form2
-    Dim filename As String = Application.StartupPath & "\Data\Heizungsdaten.hde"
-    Dim filename_Excel As String = Application.StartupPath & "\Data\Heizungsdaten_Excelimport.txt"
-    Dim path As String = Application.StartupPath & "\Data"
+    Dim filename As String = Path.Combine(Application.StartupPath, "Data", "Heizungsdaten.hde")
+    Dim filenameExcel As String = Path.Combine(Application.StartupPath, "Data", "Heizungsdaten_Excelimport.txt")
+    Dim dataPath As String = Path.Combine(Application.StartupPath, "Data")
 
-    Private Sub btn_Cancel_Click(sender As Object, e As EventArgs) Handles btn_Cancel.Click
+    Private Sub Btn_Cancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Close()
     End Sub
 
-    Private Sub btn_OK_Click(sender As Object, e As EventArgs) Handles btn_OK.Click
-        speichern()
+    Private Sub Btn_OK_Click(sender As Object, e As EventArgs) Handles btnOK.Click
+        Speichern()
         Me.Close()
-        Form1.Close()
+        Dim f1 = New Form1()
+        f1.Close()
     End Sub
 
-    Sub speichern()
-        If System.IO.Directory.Exists(path) = False Then
-            System.IO.Directory.CreateDirectory(path)
+    Sub Speichern()
+        If Not Directory.Exists(dataPath) Then
+            Directory.CreateDirectory(dataPath)
         End If
         Try
             rtb.SaveFile(filename, RichTextBoxStreamType.PlainText)
-            rtb_Excel.SaveFile(filename_Excel, RichTextBoxStreamType.PlainText)
+            rtbExcel.SaveFile(filenameExcel, RichTextBoxStreamType.PlainText)
         Catch ex As Exception
             MsgBox("Fehler beim Speichern", MsgBoxStyle.Critical, "Fehler")
         End Try
