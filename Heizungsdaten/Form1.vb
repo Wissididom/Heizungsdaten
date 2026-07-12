@@ -72,6 +72,8 @@ Public Class Form1
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
-        Process.Start(Path.Combine(Application.StartupPath, "Data"))
+        Dim filepath = Path.Combine(Application.StartupPath, "Data")
+        Directory.CreateDirectory(filepath)
+        Process.Start(filepath)
     End Sub
 End Class
